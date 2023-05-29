@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: #282727e2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      .counterBox {
+        /* border: 2px solid #fff; */
+        border-radius: 10px;
+        width: 600px;
+        height: 400px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+          rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+          rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+          rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      }
+      #counter {
+        font-size: 40px;
+        margin-bottom: 20px;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        font-weight: bold;
+      }
+      button {
+        border: 0;
+        outline: 0;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        margin: 0 3px;
+      }
+      button:nth-of-type(1) {
+        background-color: #16a34a;
+        color: #fff;
+        padding: 10px 20px;
+      }
+      button:nth-of-type(2) {
+        background-color: #d1d5db;
+      }
+
+      button:nth-of-type(3) {
+        background-color: #b91c1c;
+        color: #fff;
+        padding: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="counterBox">
+      <div id="counter">0</div>
+      <div>
+        <button class="plus">+</button>
+        <button class="reset">RESET</button>
+        <button class="mines">-</button>
+      </div>
+    </div>
+    <script>
+      let counter = document.getElementById("counter");
+      let plus = document.querySelector(".plus");
+      let reset = document.querySelector(".reset");
+      let mines = document.querySelector(".mines");
+      let _new;
+      plus.addEventListener("click", function () {
+        _new = Number(counter.innerHTML) + 1;
+        counter.innerHTML = _new;
+        counter.style.color = "#16a34a";
+      });
+      reset.addEventListener("click", function () {
+        counter.innerHTML = 0;
+        counter.style.color = "white";
+      });
+      mines.addEventListener("click", function () {
+        _new = Number(counter.innerHTML) - 1;
+        counter.style.color = "#b91c1c";
+        counter.innerHTML = _new;
+        if (counter.innerHTML <= 0) {
+          counter.innerHTML = 0;
+          counter.style.color = "white";
+        }
+      });
+    </script>
+  </body>
+</html>
