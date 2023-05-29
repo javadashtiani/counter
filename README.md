@@ -1,5 +1,6 @@
 # counter
-![counterbg](https://github.com/javadashtiani/counter/assets/134012615/51e2f576-040b-4c29-b1a9-374c16d82e67)
+![counterbg] 
+https://github.com/javadashtiani/counter/assets/134012615/8a851207-384e-40de-968e-9a98b490ef7b
 - 🔗 [Demo Project] https://javadashtiani.github.io/counter/
 - 💻 Developed by Javad Ashtiani
 - 📆 Created - 2023/05/29
